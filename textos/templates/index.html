@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>NLP Home</h1>
+  <p>Welcome to Natural Laguange Web, a website developed by <em>Muke</em>!</p>
+  <h2>Dynamic content</h2>
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>Audios:</strong> {{ num_audios }}</li>
+  </ul>
+
+  <p>You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.</p>
+{% endblock %}
