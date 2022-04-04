@@ -7,7 +7,14 @@
   <p>The library has the following record counts:</p>
   <ul>
     <li><strong>Audios:</strong> {{ num_audios }}</li>
+    <li><strong>Vocab:</strong>{{num_vocab}}</li>
   </ul>
+  {% if chart %}
+    <img src="data:image/png;base64, {{chart|safe}}"
+    <br>
+    <br>
+  {% endif %}
+  <p>{{ transcripciones }}</p>
 
   <p>You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.</p>
 {% endblock %}

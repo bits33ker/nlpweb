@@ -14,3 +14,6 @@ class Audio(models.Model):
     def __str__(self):
         """String for representing the Model object."""
         return f'{self.name}, {self.transcript}'
+
+    def get_transcript(self):
+        return self.transcript
