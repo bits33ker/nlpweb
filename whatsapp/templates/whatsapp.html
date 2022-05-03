@@ -1,0 +1,31 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>NLP Home</h1>
+  <p>Welcome to Natural Laguange Web, a website developed by <em>Muke</em>!</p>
+  <h2>Dynamic content</h2>
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>WhatsApp:</strong> {{ num_whatsapp }}</li>
+    <li><strong>Contacts:</strong>{{num_contacts}}</li>
+  </ul>
+  {% if chart_whatsapp %}
+    <img src="data:image/png;base64, {{chart_whatsapp|safe}}"
+    <br>
+    <br>
+  {% endif %}
+  {% if chart_tfidf %}
+    <h2>TfIdf</h2>
+    <img src="data:image/png;base64, {{chart_tfidf|safe}}"
+    <br>
+    <br>
+  {% endif %}
+  {% if chart_cloud %}
+    <h2>Word Cloud</h2>
+    <img src="data:image/png;base64, {{chart_cloud|safe}}"
+    <br>
+    <br>
+  {% endif %}
+
+  <p>You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.</p>
+{% endblock %}

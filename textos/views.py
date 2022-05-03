@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from textos.utils import get_hist, get_wordcloud
+from utils.utils import get_wordcloud
 
 # Create your views here.
 from .models import Audio

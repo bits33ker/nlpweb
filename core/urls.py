@@ -25,6 +25,7 @@ from django.urls import include
 
 urlpatterns += [
     path('textos/', include('textos.urls')),
+    path('whatsapp/', include('whatsapp.urls')),
 ]
 
 #Add URL maps to redirect the base URL to our application
@@ -44,3 +45,4 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += [
     path('accounts/', include('django.contrib.auth.urls')),
 ]
+

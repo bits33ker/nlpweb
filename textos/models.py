@@ -17,3 +17,4 @@ class Audio(models.Model):
 
     def get_transcript(self):
         return self.transcript
+        
