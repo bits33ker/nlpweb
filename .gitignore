@@ -1,3 +1,4 @@
 /audios.csv
 /db.sqlite3
 *.pyc
+textos/__pycache__/*

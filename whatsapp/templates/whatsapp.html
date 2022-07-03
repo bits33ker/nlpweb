@@ -26,6 +26,12 @@
     <br>
     <br>
   {% endif %}
+  {% if chart_cloud %}
+  <h2>Topic Modelling</h2>
+  <img src="data:image/png;base64, {{chart_topics|safe}}"
+  <br>
+  <br>
+  {% endif %}
 
   <p>You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.</p>
 {% endblock %}

@@ -1,6 +1,12 @@
 # Demo NLP para Gustavo.
 La demo consiste en varias sub paginas que muestran distintos artchivos en espanol y su consiguiente analisis.
 https://www.youtube.com/watch?v=vs6dXL9Wp7s&list=RDCMUC1mxuk7tuQT2D0qTMgKji3w&index=2
+https://www.machinelearningplus.com/nlp/topic-modeling-visualization-how-to-present-results-lda-models/
+
+## Usuarios:
+admin/admin
+muke/Django1234
+gustavo/Django1234
 
 ## Run:
 '''
@@ -20,4 +26,11 @@ python3 manage.py runserver
 .schema textos_audio: muestra la forma de la tabla.
 
 select count(dinstinct name) from textos_audio: Cuenta la cantidad de archivos de audio distintos.
+'''
+
+## Docker:
+'''
+Install: docker pull mongo
+Run: docker run --name some-mongo -d mongo:tag
+Help: https://hub.docker.com/_/mongo
 '''

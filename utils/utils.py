@@ -61,7 +61,9 @@ def get_wordcloud(t, stop_words):
     #    'su', 'se', 'no', 'si', 'las', 'por', 'lo', 'en', 'los', 'al',
     #    'del', 'me', 'le', 'mi', 'como', 'una', 'yo', 'para', 'todo', 'e', 
     #    'mas', 'sus', 'era', 'habia', 'este', 'esta', 'tan', 'esto']
-    wc = WordCloud(stopwords=stop_words, background_color='white', colormap='Dark2', 
+    stopwords = stop_words
+    stopwords |=set(['multimedia', 'omitido'])
+    wc = WordCloud(stopwords=stopwords, background_color='white', colormap='Dark2', 
         max_font_size=150, random_state=42)
     wc.generate(t)
     plt.figure(figsize=[10,5])
@@ -73,6 +75,6 @@ def get_wordcloud(t, stop_words):
 
 import pyLDAvis
 def get_topics(lda, chat_cv, cv):
-    pyLDAvis.enable_notebook()
+    #pyLDAvis.enable_notebook()
     dash = pyLDAvis.sklearn.prepare(lda, chat_cv, cv, mds='tsne')
     return dash
